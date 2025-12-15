@@ -43,6 +43,7 @@ Program for flipflops and verify its truth table in quartus using Verilog progra
 Developed by: DHARSHIN M
 RegisterNumber:25018496
 ```
+UP COUNTER:
 module up(out,clk,rst);
 input clk,rst;
 output reg [3:0]out;
@@ -54,13 +55,30 @@ begin
      out <= out+1;
 end
 endmodule
+
+DOWN COUNTER
+module ex12(out,clk,rst);
+input clk,rst;
+output reg [3:0]out;
+always @ (posedge clk)
+begin
+   if(rst)
+     out<=0;
+   else 
+     out <= out-1;
+end
+endmodule
 ```
 
 **RTL LOGIC UP COUNTER**
 <img width="1918" height="1022" alt="image" src="https://github.com/user-attachments/assets/ae9ab32c-0d4a-4914-9347-bc3a5f7e13c3" />
+<img width="1918" height="1022" alt="image" src="https://github.com/user-attachments/assets/caa9296e-8ba7-4d71-8326-b5a7a7f6a412" />
+
 
 **TIMING DIAGRAM FOR IP COUNTER**
 <img width="1918" height="1020" alt="image" src="https://github.com/user-attachments/assets/7766a818-3e01-4e39-9a01-6a5a1fe9936d" />
+<img width="1918" height="1016" alt="image" src="https://github.com/user-attachments/assets/2af02851-8cd1-407b-8b87-4ed098cafa7a" />
+
 
 **TRUTH TABLE**
 
